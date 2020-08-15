@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 run 'npm install' to install dependencies
 
 ### Project Archetecture
-![Screenshot](arch.png)
+![Archetecture](arch.PNG)
 
 ## Development server
 
