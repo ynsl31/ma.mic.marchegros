@@ -1,0 +1,78 @@
+<section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Add vendeur</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- general form elements -->      
+          <div class="card card-primary">
+            <div class="card-header" style="background-color: #6c757d;">
+              <h3 class="card-title">please enter the informations</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form (ngSubmit)="onSubmit(vendeurModelForm)" #vendeurModelForm="ngForm">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">first name</label>
+                      <input type="text" class="form-control" [(ngModel)]="vendeur.nom" name="nom"
+                        placeholder="Enter Nom" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">last name</label>
+                      <input type="text" class="form-control" [(ngModel)]="vendeur.prenom" name="prenom"
+                        placeholder="Enter p" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">phone number</label>
+                        <input type="text" class="form-control" id="inputError" [(ngModel)]="vendeur.tel"
+                          name="reference" placeholder="Reference" required>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label for="exampleInputPassword1"> N°Patent</label>
+                      <input type="text" class="form-control" [(ngModel)]="vendeur.patente" name="tel" placeholder="Tel">
+                    </div>
+                    <div class="form-group">
+                      <label for="inputDescription">Adresse</label>
+                      <textarea id="inputDescription" [(ngModel)]="vendeur.adresse" name="address" class="form-control"
+                        rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary" [disabled]="!vendeurModelForm.form.valid"
+                  style="background-color: #903479;">Submit</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!--/.col (left) -->
+
+        <!--/.col (right) -->
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
