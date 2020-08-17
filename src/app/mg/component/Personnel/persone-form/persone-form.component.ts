@@ -6,8 +6,6 @@ import { AgentBalance } from 'src/app/mg/modules/AgentBalance';
 import { PersonneService } from '../services/personne.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { type } from 'os';
-
 @Component({
   selector: 'app-persone-form',
   templateUrl: './persone-form.component.html',

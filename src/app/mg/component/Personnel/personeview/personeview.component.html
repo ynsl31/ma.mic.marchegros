@@ -31,10 +31,13 @@
                         <p class="text-muted text-center">{{personne.type}}</p>
 
                         <ul class="list-group list-group-unbordered mb-3">
-                            <li class="list-group-item">
+                            <li class="list-group-item" *ngIf="personne.type == 'Agent de Balance'">
+                                <b>Matrecule</b> <a class="float-right">{{personne.matrecule}}</a>
+                            </li>
+                            <!-- <li class="list-group-item">
                                 <b>Identifiant</b> <a class="float-right">{{personne.idPers}}</a>
                             </li>
-                          
+                           -->
                             <li class="list-group-item">
                                 <b>N° telephone</b> <a class="float-right">{{personne.tel}}</a>
                             </li>
